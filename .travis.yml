@@ -27,5 +27,5 @@ matrix:
         - cd ios
         - pod install
         - cd ..
-        - detox build --configuration ios
-        - detox test --configuration ios --cleanup
+        - detox build --configuration ios.sim.release
+        - detox test --configuration ios.sim.release --cleanup

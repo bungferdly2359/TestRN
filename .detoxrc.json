@@ -2,10 +2,18 @@
   "testRunner": "jest",
   "runnerConfig": "e2e/config.json",
   "configurations": {
-    "ios": {
+    "ios.sim.debug": {
       "type": "ios.simulator",
       "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/MyApp.app",
       "build": "xcodebuild -workspace ios/MyApp.xcworkspace -scheme MyApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -quiet",
+      "device": {
+        "type": "iPhone 11 Pro"
+      }
+    },
+    "ios.sim.release": {
+      "type": "ios.simulator",
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/MyApp.app",
+      "build": "xcodebuild -workspace ios/MyApp.xcworkspace -scheme MyApp -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet",
       "device": {
         "type": "iPhone 11 Pro"
       }
