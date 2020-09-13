@@ -21,6 +21,7 @@ matrix:
       before_install:
         - brew tap wix/brew
         - brew install applesimutils
+        - gem install xcpretty
       script:
         - yarn install
         - yarn test
